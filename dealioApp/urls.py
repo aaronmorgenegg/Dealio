@@ -1,0 +1,12 @@
+from django.conf.urls import url
+from . import views
+
+
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^restaurants$', views.restaurants, name='restaurants'),
+    url(r'^promotions$', views.promotions, name='promotions'),
+
+
+]
