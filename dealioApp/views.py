@@ -13,6 +13,6 @@ def restaurants(request):
     return render(request, 'dealioApp/restaurants.html', {'restaurants': restaurants}) #render looks in templates directory #can pass in content into render() such as dictionaries
 
 
-def promotions(request):
-    restaurants = Restaurant.objects.all()
-    return render(request, 'dealioApp/promotions.html', {'restaurants': restaurants})
+def promotions(request, restaurant_id):#pass in a restaurant's id into this view to access its promotions via getPromotions
+    restaurant = Restaurant.objects.get(id=restaurant_id)
+    return render(request, 'dealioApp/promotions.html', {'restaurant': restaurant})

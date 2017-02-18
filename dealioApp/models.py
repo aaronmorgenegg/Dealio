@@ -8,7 +8,6 @@ from django.db import models
 class Promotion(models.Model):
     title = models.CharField(max_length=25, unique=True)  # specify the models fields (data type) based on what django provides
     description = models.TextField(blank=True, null=True)
-
     def __str__(self):
         return self.title
 
