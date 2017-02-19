@@ -42,14 +42,18 @@
 
   <div class="container-fluid" >
 
-    <h1>Promotions</h1>
+    <h1>{{restaurant.name}} Promotions</h1>
+      <h2><a href={{restaurant.review_link}} style="color:black" target="_blank">-Yelp Review</a></h2>
     <hr>
     <ul>
-
         {% for promo in restaurant.getPromotions %}
             <li><h2>{{promo}}</h2></li>
-        {% endfor %}
+            <ul>
+                <h3><li>{{promo.description}}</li></h3>
 
+
+            </ul>
+        {% endfor %}
     </ul>
 
   </div>
