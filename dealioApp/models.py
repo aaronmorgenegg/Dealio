@@ -28,3 +28,11 @@ class Restaurant(models.Model):
         for i in range(0,self.proms.count()):
             promos.append(self.proms.all()[i])
         return promos
+
+
+class Owner(models.Model):
+    restaurants = models.ManyToManyField(Restaurant)
+    owner_id = models.CharField(max_length = 25, unique=True)
+
+    def __str__(self):
+        return self.owner_id
