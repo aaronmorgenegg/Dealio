@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
-
+#This is a test
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Dealio.settings")
     try:
